@@ -83,7 +83,38 @@ npx wrangler tail
 ```
 
 
+# HolisticBook
 
+Lightweight, privacy-first booking platform for holistic psychologists  
+Built with Vite + React + Hono + Cloudflare D1 + Drizzle ORM
+
+## Status
+🚧 In active development – currently implementing core infrastructure (EPIC 1)
+
+## Features (planned MVP)
+- Practitioner dashboard with availability management
+- Public booking flow (no client account needed)
+- Encrypted storage of client data (HIPAA-aligned practices)
+- SEO-optimized public pages via SSR
+
+## Tech Stack
+- Frontend: React 19, TypeScript, Vite, Tailwind, shadcn/ui (planned)
+- Backend: Hono (Cloudflare Workers)
+- Database: Cloudflare D1 + Drizzle ORM
+- Auth: Magic links (MVP) → Firebase later
+
+## Quick Start (Local Development)
+1. Clone repo
+2. `npm install`
+3. `npx wrangler dev` → opens at http://localhost:8787
+
+## Documentation
+- Product vision & requirements → [Docs/PRD.md](./Docs/PRD.md)
+- Current implementation tasks → [Docs/TASKS.md](./Docs/TASKS.md)
+- Project memory / state → [memory-bank.md](./memory-bank.md)
+
+## License
+MIT (or choose your license)
 
 
 
