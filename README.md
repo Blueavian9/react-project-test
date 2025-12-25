@@ -82,6 +82,11 @@ Monitor your workers:
 npx wrangler tail
 ```
 
+
+
+
+
+
 ## Additional Resources
 
 - [Cloudflare Workers Documentation](https://developers.cloudflare.com/workers/)
