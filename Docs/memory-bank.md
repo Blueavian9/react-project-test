@@ -18,7 +18,16 @@
 - Encryption key handling: temporary in wrangler.toml → secrets in prod
 
 ## Folder Structure Snapshot (update when it changes significantly)
-
+src/
+├── domain/          # Drizzle schemas + interfaces
+├── infra/           # DB service impl, future other infra
+├── server/          # Hono app, routes
+├── components/      # React shared UI
+└── pages/           # React pages/routes (future)
+drizzle/
+└── migrations/
+wrangler.toml
+drizzle.config.ts
 
 ## Deployment Reminders
 - Local: npx wrangler dev
