@@ -1,4 +1,3 @@
-# wrangler.toml – HolisticBook / react-project-test
 
 name = "react-project-test"
 main = "./src/worker/index.ts"               # confirm this matches your Hono entry point
