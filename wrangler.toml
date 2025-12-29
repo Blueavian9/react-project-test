@@ -1,21 +1,20 @@
-{
-	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "react-project-test",
-	"main": "./src/worker/index.ts",
-	"compatibility_date": "2025-10-08",
-	"compatibility_flags": ["nodejs_compat"],
-	"observability": {
-		"enabled": true
-	},
-	"upload_source_maps": true,
-	"assets": {
-		"directory": "./dist/client",
-		"not_found_handling": "single-page-application"
-	}
+# wrangler.toml – HolisticBook / react-project-test
+
+name = "react-project-test"
+main = "./src/worker/index.ts"               # confirm this matches your Hono entry point
+compatibility_date = "2025-12-29"            # update to today or later
+compatibility_flags = ["nodejs_compat"]
+
+observability = { enabled = true }
+upload_source_maps = true
+
+assets = {
+  directory = "./dist/client"
+  not_found_handling = "single-page-application"
 }
 
-name = "react-project-test"               # ← your Worker name
-main = "src/worker.ts"                    # or wherever your Hono entry is (check repo)
-compatibility_date = "2025-12-28"         # ← use today's date or later
-
-# We'll add D1 in the next step
+[[d1_databases]]
+binding = "DB"                               # access in code as c.env.DB
+database_name = "holisticbook"
+database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"   # ← PASTE YOUR REAL ID HERE from `wrangler d1 create` output
+migrations_dir = "drizzle/migrations"
