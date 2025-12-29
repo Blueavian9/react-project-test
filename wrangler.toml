@@ -1,19 +1,15 @@
-
 name = "react-project-test"
-main = "./src/worker/index.ts"               # confirm this matches your Hono entry point
-compatibility_date = "2025-12-29"            # update to today or later
+main = "./src/worker/index.ts"  # Confirm this path matches your Hono entry
+compatibility_date = "2025-12-29"
 compatibility_flags = ["nodejs_compat"]
 
 observability = { enabled = true }
 upload_source_maps = true
 
-assets = {
-  directory = "./dist/client"
-  not_found_handling = "single-page-application"
-}
+assets = { directory = "./dist/client", not_found_handling = "single-page-application" }
 
 [[d1_databases]]
-binding = "DB"                               # access in code as c.env.DB
+binding = "DB"
 database_name = "holisticbook"
-database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"   # ← PASTE YOUR REAL ID HERE from `wrangler d1 create` output
+database_id = "your-real-database-id-here"  # PASTE YOUR REAL ID (run `npx wrangler d1 list` if lost)
 migrations_dir = "drizzle/migrations"
